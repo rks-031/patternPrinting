@@ -3,15 +3,18 @@ using namespace std;
 
 int main()
 {
-        int n = 4, k = 1;
-        for (int i = 1; i <= n; i++)
+        int n = 4;
+        int row = 1;
+        while (row <= n)
         {
-                char value = 65 - i + 1;
-                for (int j = 1; j < i; j++)
+                int col = 1;
+                while (col <= row)
                 {
-                        cout << value << " ";
+                        char ch = 'A' + col + row - 2;
+                        cout << ch;
+                        col++;
                 }
-                value++;
                 cout << endl;
+                row++;
         }
 }
